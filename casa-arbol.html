@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VR Experience - Index</title>
+    <meta name="description" content="Casa árbol - PEC 1 Realidad virtual">
+    <!--    Llamada a la librería A-FRAME-->
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <!--    Cargamos la librería de entornos predefinidos -->
+    <script src="https://unpkg.com/aframe-environment-component@1.0.0/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<body>
+<!-- Altres entorns previstos: default, contact, egypt, checkerboard, forest, goaland, yavapai, goldmine,
+     threetowers, poison, arches, tron, japan, dream, volcano, starry, osiris. -->
+<a-scene environment="preset: forest">
+    <a-assets>
+        <img id="boxTexture" src="oxid.png">
+        <img id="boxTexture2" src="toMonkey.png">
+    </a-assets>
+
+    <!-- Elemento "box" (caja) forma básica -->
+    <!-- La textura de la caja la cogemos desde la id de la imagen que queremos utilizar (boxTexture) -->
+    <a-box position="3 3 -10" rotation="0 45 45" scale="2 2 2" src="#boxTexture">
+        <!-- Definimos una animación para hacer crecer el cubo-->
+        <a-animation atribute="scale"
+                     direction="alternate"
+                     dur="1000"
+                     repeat="indefinite"
+                     to="2.2 2.2 2.2">
+
+        </a-animation>
+        <!-- Definimos una nueva animación de rotación para que funcione cuando detecte el cursor-->
+        <a-animation attribute="rotation"
+                     begin="mouseenter"
+                     dur="300"
+                     to="360 45 45">
+        </a-animation>
+    </a-box>
+
+    <a-link href="monkey03.html"
+            title="Go to monkey"
+            image="#boxTexture2"
+            peekMode="false"
+            position="-2 2 -3"></a-link>
+
+    <a-camera>
+        <a-cursor color="#66ffff"></a-cursor>
+    </a-camera>
+
+</a-scene>
+</body>
+</html>
