@@ -22,29 +22,29 @@
         <a-asset-item id="finn-mtl" src="recursos/finnthehuman.mtl"></a-asset-item>
 
         <!-- Assets para geometría (obj) y para material (mtl) de la casa árbol-->
-        <a-asset-item id="treehouse" src="recursos/treehouse.obj"></a-asset-item>
-        <a-asset-item id="treehouse-mtl" src="recursos/treehouse.mtl"></a-asset-item>
+        <a-asset-item id="jake" src="recursos/jake.obj"></a-asset-item>
+        <a-asset-item id="jake-mtl" src="recursos/jake.mtl"></a-asset-item>
     </a-assets>
 
     <a-entity obj-model="obj: #finn; mtl: #finn-mtl"
               material="color: red; opacity: 1.0"
-              position="0 0.1 -7"
-              rotation="0 100 0"
+              position="0 1 -7"
+              rotation="10 100 0"
               scale="0.08 0.08 0.08">
     </a-entity>
 
-    <a-entity obj-model="obj: #treehouse; mtl: #treehouse-mtl"
+    <a-entity obj-model="obj: #jake; mtl: #jake-mtl"
               material="color: red; opacity: 1.0"
-              position="0 0.1 -50"
-              rotation="0 190 0"
-              scale="1 1 1">
+              position="0 3 -4"
+              rotation="-20 40 0"
+              scale="0.3 0.3 0.3">
     </a-entity>
 
     <a-link href="casa-arbol.html"
-            title="Go to Tree House"
+            title="Go to the Tree House"
             image="#boxTexture2"
             peekMode="false"
-            position="-2 2 -3"></a-link>
+            position="-3 2 -5"></a-link>
 
     <a-camera>
         <a-cursor color="#66ffff"></a-cursor>

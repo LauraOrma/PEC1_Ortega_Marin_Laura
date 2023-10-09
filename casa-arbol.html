@@ -17,6 +17,8 @@
 <!--Entorno predefinido-->
 <a-scene environment="preset: forest">
     <a-assets>
+        <img id="treehouseLink" src="recursos/treehouse.png">
+
         <!-- Assets para geometría (obj) y para material (mtl) de finn el humano-->
         <a-asset-item id="finn" src="recursos/finnthehuman.obj"></a-asset-item>
         <a-asset-item id="finn-mtl" src="recursos/finnthehuman.mtl"></a-asset-item>
@@ -40,9 +42,9 @@
               scale="1 1 1">
     </a-entity>
 
-    <a-link href="ice-king.html"
-            title="Go to Ice Lands"
-            image="#boxTexture2"
+    <a-link href="fantasy.html"
+            title="Go to Jake's Fantasy"
+            image="#treehouseLink"
             peekMode="false"
             position="-2 2 -3"></a-link>
 
