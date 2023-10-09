@@ -8,19 +8,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Punto de partida - PEC 1 Realidad Virtual</title>
     <meta name="description" content="¡Comienza tu aventura en VR!">
+    <!--Fuentes de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
     <!--Añadimos CSS al HTML-->
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="stylesheet" type="text/css" href="recursos/styles.css"/>
 </head>
 <body>
 <div id="pagina">
-    <header>
+    <header class="container">
         <h1>Comienza tu... ¡Hora de aventuras!</h1>
     </header>
-    <main id="VRarea">
+    <main class="container" id="VRarea">
         <iframe id="vr1" src="casa-arbol.html"></iframe>
         <div id="go" onClick="javascript:document.location='casa-arbol.html'"></div>
     </main>
-    <footer id="footer">
+    <footer class="container" id="footer">
         <div>
             <h2>Tutorial</h2>
             <p>¡Haz clic en las gafas para entrar!</p>
