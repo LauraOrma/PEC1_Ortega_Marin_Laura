@@ -17,7 +17,8 @@
 <!--Entorno predefinido-->
 <a-scene environment="preset: forest">
     <a-assets>
-        <img id="treehouseLink" src="recursos/treehouse.png">
+        <!-- Imagen para link-->
+        <img id="fantasyLink" src="recursos/images/fantasy.png">
 
         <!-- Assets para geometría (obj) y para material (mtl) de finn el humano-->
         <a-asset-item id="finn" src="recursos/finnthehuman.obj"></a-asset-item>
@@ -30,9 +31,10 @@
 
     <a-entity obj-model="obj: #finn; mtl: #finn-mtl"
               material="color: red; opacity: 1.0"
-              position="0 0.1 -7"
-              rotation="0 100 0"
+              position="3 0.1 -7"
+              rotation="0 -100 0"
               scale="0.08 0.08 0.08">
+        <a-animation attribute="rotation" direction="right" dur="3000" to="0 30 0"></a-animation>
     </a-entity>
 
     <a-entity obj-model="obj: #treehouse; mtl: #treehouse-mtl"
@@ -44,7 +46,7 @@
 
     <a-link href="fantasy.html"
             title="Go to Jake's Fantasy"
-            image="#treehouseLink"
+            image="#fantasyLink"
             peekMode="false"
             position="-2 2 -3"></a-link>
 

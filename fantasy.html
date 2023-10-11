@@ -17,6 +17,14 @@
 <!--Entorno predefinido-->
 <a-scene environment="preset: goaland">
     <a-assets>
+        <!-- Imagen para link-->
+        <img id="treehouseLink" src="recursos/images/treehouse.png">
+
+        <!-- Texturas-->
+        <img id="sphereTexture1" src="recursos/texturas/stone.jpg">
+        <img id="sphereTexture2" src="recursos/texturas/ground.jpg">
+        <img id="sphereTexture3" src="recursos/texturas/amatist.jpg">
+
         <!-- Assets para geometría (obj) y para material (mtl) de finn el humano-->
         <a-asset-item id="finn" src="recursos/finnthehuman.obj"></a-asset-item>
         <a-asset-item id="finn-mtl" src="recursos/finnthehuman.mtl"></a-asset-item>
@@ -28,21 +36,48 @@
 
     <a-entity obj-model="obj: #finn; mtl: #finn-mtl"
               material="color: red; opacity: 1.0"
-              position="0 1 -7"
+              position="0 2 -7"
               rotation="10 100 0"
               scale="0.08 0.08 0.08">
+        <a-animation attribute="position" direction="alternate" dur="2000" to="0 2.5 -7" repeat="indefinite"
+                     easing="linear"></a-animation>
+        <a-animation attribute="rotation" direction="right" dur="80000" to="-10 -100 0" repeat="indefinite"
+                     easing="linear"></a-animation>
     </a-entity>
 
     <a-entity obj-model="obj: #jake; mtl: #jake-mtl"
               material="color: red; opacity: 1.0"
-              position="0 3 -4"
-              rotation="-20 40 0"
+              position="0 4 -4"
+              rotation="0 40 -90"
               scale="0.3 0.3 0.3">
+        <a-animation attribute="rotation" direction="right" dur="60000" to="-360 40 90" repeat="indefinite"
+                     easing="linear"></a-animation>
     </a-entity>
 
+    <a-sphere position="1 0.5 -3" rotation="0 0 0" scale="0.2 0.2 0.2" src="#sphereTexture1">
+        <a-animation attribute="scale" direction="alternate" dur="1000" repeat="indefinite"
+                     to="0.21 0.21 0.21"></a-animation>
+        <a-animation attribute="position" direction="alternate" dur="10000" to="1 3 -3" repeat="indefinite"
+                     easing="ease-bounce" begin="mouseenter"></a-animation>
+    </a-sphere>
+    <a-text value="Interact!" color="white" position="0.7 0.15 -3" scale="0.8 0.8 0.8"></a-text>
+
+    <a-sphere position="-1 0.5 -3" rotation="0 0 0" scale="0.2 0.2 0.2" src="#sphereTexture2">
+        <a-animation attribute="scale" direction="alternate" dur="4000" repeat="indefinite"
+                     to="0.18 0.18 0.18"></a-animation>
+        <a-animation attribute="position" direction="alternate" dur="10000" to="-1 3 -3" repeat="indefinite"
+                     easing="ease-back"></a-animation>
+    </a-sphere>
+
+    <a-sphere position="-17.5 14 -22" rotation="0 0 0" scale="3 3 3" src="#sphereTexture3">
+        <a-animation attribute="position" direction="alternate" dur="10000" to="-17.5 15 -22" repeat="indefinite"
+                     easing="ease-back"></a-animation>
+    </a-sphere>
+
+    <!-- Volver a la página de la Casa árbol-->
     <a-link href="casa-arbol.html"
             title="Go to the Tree House"
-            image="#boxTexture2"
+            image="#treehouseLink"
             peekMode="false"
             position="-3 2 -5"></a-link>
 
